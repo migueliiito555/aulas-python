@@ -1,3 +1,7 @@
+from random import choice
+
+
+
 class Cor():
     def __init__(self):
         self.p = "\033[;30m"
@@ -36,3 +40,14 @@ class Cor():
         self.s = "\033[4m"
         self.i = "\033[7m"
         self.a = "\033[m"
+    
+    def colorir(self, string: str = "") -> str:
+        stringColorida: str = ""
+        cores = [self.vr, self.vd, self.ar, self.az, self.m, self.c, self.vrc, self.vdc, self.arc, self.azc, self.mc, self.cc]
+
+       
+        for i in range(0, len(string)):
+            stringColorida = stringColorida + choice(cores) + string[i]
+
+
+        return stringColorida
