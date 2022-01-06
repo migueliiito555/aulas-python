@@ -47,7 +47,7 @@ class Cor():
 
        
         for i in range(0, len(string)):
-            stringColorida = stringColorida + choice(cores) + string[i]
+            stringColorida += choice(cores) + string[i]
 
 
-        return stringColorida
+        return stringColorida + self.a
